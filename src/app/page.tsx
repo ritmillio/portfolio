@@ -4,6 +4,7 @@ import { LatestPost } from "@/app/_components/post";
 import { api, HydrateClient } from "@/trpc/server";
 
 import { ThemeToggle } from "@/components/common/theme-toggle";
+import { Noise } from "@/components/common/noise";
 
 export default async function Home() {
   const hello = await api.post.hello({ text: "from tRPC" });
@@ -49,8 +50,30 @@ export default async function Home() {
           </div>
 
           <LatestPost />
+          <NoiseDemo />
         </div>
       </main>
     </HydrateClient>
+  );
+}
+
+export function NoiseDemo() {
+  return (
+    <div className="relative flex w-full items-center justify-center">
+      {/* Text with noise mask */}
+      <div className="relative px-12 py-[200px]">
+        <h1 className="text-center text-[8rem] font-black text-black text-muted">
+          Oh, edgy!
+        </h1>
+        <div className="absolute inset-0 rounded-lg mix-blend-overlay"></div>
+        <Noise
+          patternSize={200}
+          patternScaleX={1}
+          patternScaleY={1}
+          patternRefreshInterval={2}
+          patternAlpha={35}
+        />
+      </div>
+    </div>
   );
 }
