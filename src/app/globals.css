@@ -34,7 +34,7 @@
     --sky-500: #0ea5e9;
   }
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222.2 84% 1.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -64,11 +64,18 @@
     --sky-500: #0ea5e9;
   }
 }
+
+.bg-noise {
+  @apply min-h-screen bg-background bg-[length:130px_130px];
+  background-image: url("/background-noise.webp");
+  background-repeat: repeat;
+}
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-noise text-foreground;
   }
 }

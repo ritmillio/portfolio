@@ -12,6 +12,7 @@ import {
 } from "@radix-ui/react-icons";
 
 import { BentoCard, BentoGrid } from "@/components/ui/bento-grid";
+import Footer from "@/components/common/footer";
 
 import { ThemeToggle } from "@/components/common/theme-toggle";
 import { Noise } from "@/components/common/noise";
@@ -67,6 +68,7 @@ export default async function Home() {
           </div>
         </Container>
       </main>
+      <Footer />
     </HydrateClient>
   );
 }
