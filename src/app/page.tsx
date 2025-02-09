@@ -20,9 +20,14 @@ import { Container } from "@/components/common/container";
 
 export default async function Home() {
   const hello = await api.post.hello({ text: "from tRPC" });
+  const weather = await api.weather.getWeatherByCity({
+    city: "London",
+    units: "metric",
+  });
 
   void api.post.getLatest.prefetch();
 
+  console.log("WEATHER:::: ", weather);
   return (
     <HydrateClient>
       <main className="flex min-h-screen flex-col items-center justify-center">
