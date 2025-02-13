@@ -2,15 +2,14 @@ import "@/app/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
-import { config } from "@/config";
 
 /** Providers */
 import { TRPCReactProvider } from "@/trpc/react";
 import { ThemeProvider } from "@/app/providers/theme-provider";
 
 export const metadata: Metadata = {
-  title: config.layout.meta.name,
-  description: config.layout.meta.description,
+  title: "Hello World",
+  description: "Hello World",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
@@ -19,7 +18,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
-      lang={config.layout.lang}
+      lang="en"
       className={`${GeistSans.variable}`}
       suppressHydrationWarning
     >
@@ -27,7 +26,7 @@ export default function RootLayout({
         <TRPCReactProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme={config.layout.defaultTheme}
+            defaultTheme="dark" // default theme -> system if you want to use user preference
             enableSystem
             disableTransitionOnChange
           >

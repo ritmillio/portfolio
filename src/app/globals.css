@@ -65,17 +65,11 @@
   }
 }
 
-.bg-noise {
-  @apply min-h-screen bg-background bg-[length:130px_130px];
-  background-image: url("/background-noise.webp");
-  background-repeat: repeat;
-}
-
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-noise text-foreground;
+    @apply bg-background text-foreground;
   }
 }
