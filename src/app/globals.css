@@ -69,6 +69,9 @@
   * {
     @apply border-border;
   }
+  html {
+    @apply text-[95%];
+  }
   body {
     @apply bg-background font-thin text-foreground;
     scroll-behavior: smooth;

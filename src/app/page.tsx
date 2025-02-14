@@ -16,21 +16,23 @@ import { useEffect } from "react";
 
 export default function Page() {
   /** locking screen intentionally for displaying animation properly */
-  useEffect(() => {
-    const originalStyle = window.getComputedStyle(document.body).overflow;
-    document.body.style.overflow = "hidden";
-    const timer = setTimeout(() => {
-      document.body.style.overflow = originalStyle;
-    }, 4000);
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     const originalStyle = window.getComputedStyle(document.body).overflow;
+  //     document.body.style.overflow = "hidden";
+  //     const timer = setTimeout(() => {
+  //       document.body.style.overflow = originalStyle;
+  //     }, 4000);
 
-    return () => {
-      clearTimeout(timer);
-      document.body.style.overflow = originalStyle;
-    };
-  }, []);
+  //   return () => {
+  //     clearTimeout(timer);
+  //       document.body.style.overflow = originalStyle;
+  //     };
+  //   }
+  // }, []);
 
   return (
-    <div className="min-h-[400vh] text-base sm:text-lg md:text-xl">
+    <div className="text-base sm:text-lg md:text-xl">
       <div className="relative flex h-screen flex-col items-center justify-center">
         <LayoutGroup>
           {/* Changed from motion.p to motion.div */}
