@@ -10,8 +10,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import LenisScrollProvider from "./providers/lenis-provider";
 
 export const metadata: Metadata = {
-  title: "folio - @ritmillio  ",
-  description: "Hello World",
+  title: "Zoltan Fodor",
+  description: "Portfolio Website of Zoltan Fodor - @ritmillio",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 

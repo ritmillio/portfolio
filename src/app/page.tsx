@@ -105,7 +105,7 @@ export default function Page() {
   );
 }
 
-export function TextRevealDemo() {
+function TextRevealDemo() {
   return (
     <div className="z-10 flex min-h-[1024px] flex-col items-center justify-center rounded-lg border bg-white dark:bg-black">
       <TextReveal text="Magic UI will change the way you design. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos." />
