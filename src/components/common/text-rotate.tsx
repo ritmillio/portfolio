@@ -165,7 +165,7 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
         >
           {/* Screen reader only (optionally, you could provide a fallback text) */}
           <span className="sr-only">Animated text</span>
-          <div className="relative h-[200px] w-[300px] overflow-hidden">
+          <div className="relative h-[200px] w-[400px] overflow-hidden">
             <AnimatePresence
               mode={animatePresenceMode}
               initial={animatePresenceInitial}

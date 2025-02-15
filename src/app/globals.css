@@ -88,3 +88,7 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.mapboxgl-ctrl-bottom-right {
+  @apply hidden;
+}
