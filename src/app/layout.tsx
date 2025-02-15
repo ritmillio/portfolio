@@ -9,6 +9,9 @@ import { ThemeProvider } from "@/app/providers/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import LenisScrollProvider from "./providers/lenis-provider";
 
+/** Sonner Toast */
+import { Toaster } from "@/components/ui/sonner";
+
 export const metadata: Metadata = {
   title: "Zoltan Fodor",
   description: "Portfolio Website of Zoltan Fodor - @ritmillio",
@@ -35,6 +38,7 @@ export default function RootLayout({
                 disableTransitionOnChange
               >
                 {children}
+                <Toaster />
               </ThemeProvider>
             </TooltipProvider>
           </LenisScrollProvider>
