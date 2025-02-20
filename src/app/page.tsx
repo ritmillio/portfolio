@@ -8,6 +8,7 @@ import { TextReveal } from "@/components/common/text-reveal";
 import { Footer } from "./_components/footer";
 import { Map } from "@/components/common/map";
 import { Mac } from "@/components/common/mac";
+import { CodeBlockDemo } from "./_components/code";
 
 export default function Page() {
   const { scrollYProgress } = useScroll();
@@ -30,6 +31,9 @@ export default function Page() {
 
         {/** TEXT REVEAL */}
         <TextRevealDemo />
+
+        {/** CODE */}
+        <CodeBlockDemo />
 
         {/** ADDITIONAL CONTENT */}
         <div className="my-20">
