@@ -42,5 +42,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
+git@github.com:ritmillio/
+
 # idea files
 .idea
