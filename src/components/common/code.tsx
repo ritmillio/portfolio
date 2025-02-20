@@ -144,11 +144,6 @@ export function CodeBlock({ files, defaultTitle, className }: CodeBlockProps) {
       <div className="max-h-[400px] overflow-auto">
         <SyntaxHighlighter
           language={language}
-          style={
-            document.documentElement.classList.contains("dark")
-              ? darkTheme
-              : lightTheme
-          }
           customStyle={{
             margin: 0,
             padding: "1rem",

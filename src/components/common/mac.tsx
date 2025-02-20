@@ -76,7 +76,7 @@ export function Mac({ width = 600, height = 500, src, ...props }: MacProps) {
       <foreignObject x="29.12" y="25.02" width="541.76" height="305.06">
         <div style={{ width: "100%", height: "100%", position: "relative" }}>
           {/* Animated content */}
-          <div className="relative flex h-full w-full flex-col items-center justify-center">
+          {/* <div className="relative flex h-full w-full flex-col items-center justify-center">
             <LayoutGroup>
               <motion.div
                 className="flex items-center justify-center whitespace-pre"
@@ -126,7 +126,7 @@ export function Mac({ width = 600, height = 500, src, ...props }: MacProps) {
             <p className="absolute bottom-0 right-0 mb-1 mr-1 whitespace-pre-wrap text-sm tracking-tighter text-black dark:text-white">
               <NumberTicker value={100} speed={0.6} />
             </p>
-          </div>
+          </div> */}
         </div>
       </foreignObject>
 

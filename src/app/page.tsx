@@ -9,6 +9,7 @@ import { Footer } from "./_components/footer";
 import { Map } from "@/components/common/map";
 import { Mac } from "@/components/common/mac";
 import { CodeBlockDemo } from "./_components/code";
+import App from "./_components/app";
 
 export default function Page() {
   const { scrollYProgress } = useScroll();
@@ -24,7 +25,7 @@ export default function Page() {
             style={{ scale }}
             className="relative flex w-full items-center justify-center"
           >
-            <Mac width={600} height={500} />
+            <App />
             {/** Overlay container positioned to match the Mac screen area */}
           </motion.div>
         </div>
