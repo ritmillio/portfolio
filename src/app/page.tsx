@@ -3,37 +3,12 @@
 import { LayoutGroup, motion } from "motion/react";
 import { TextRotate } from "@/components/common/text-rotate";
 import { NumberTicker } from "@/components/common/number-ticker";
-import {
-  Beer,
-  Coffee,
-  Flag,
-  MountainSnow,
-  Pencil,
-  Sun,
-  Wine,
-} from "lucide-react";
+import { Beer, Coffee, MountainSnow, Sun } from "lucide-react";
 import { TextReveal } from "@/components/common/text-reveal";
-import { useEffect } from "react";
 import { Footer } from "./_components/footer";
 import { Map } from "@/components/common/map";
 
 export default function Page() {
-  /** locking screen intentionally for displaying animation properly */
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     const originalStyle = window.getComputedStyle(document.body).overflow;
-  //     document.body.style.overflow = "hidden";
-  //     const timer = setTimeout(() => {
-  //       document.body.style.overflow = originalStyle;
-  //     }, 4000);
-
-  //   return () => {
-  //     clearTimeout(timer);
-  //       document.body.style.overflow = originalStyle;
-  //     };
-  //   }
-  // }, []);
-
   return (
     <>
       <div className="text-base sm:text-lg md:text-xl">
@@ -107,7 +82,7 @@ export default function Page() {
 
 function TextRevealDemo() {
   return (
-    <div className="z-10 flex min-h-[1024px] flex-col items-center justify-center rounded-lg border bg-white dark:bg-black">
+    <div className="z-10 flex min-h-[1024px] flex-col items-center justify-center rounded-lg bg-white dark:bg-black">
       <TextReveal text="Magic UI will change the way you design. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos." />
       <div className="h-[320px] w-[320px]">
         <Map />

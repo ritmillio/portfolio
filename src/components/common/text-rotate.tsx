@@ -180,6 +180,7 @@ const TextRotate = forwardRef<TextRotateRef, TextRotateProps>(
                   animate={animate}
                   exit={exit}
                   transition={transition}
+                  className="text-2xl"
                 >
                   {currentText}
                 </motion.div>

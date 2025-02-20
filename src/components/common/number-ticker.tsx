@@ -40,18 +40,25 @@ export function NumberTicker({
     }
   }, [motionValue, isInView, delay, value, direction]);
 
-  useEffect(
-    () =>
-      springValue.on("change", (latest) => {
-        if (ref.current) {
+  useEffect(() => {
+    const unsubscribe = springValue.on("change", (latest) => {
+      if (ref.current) {
+        const formattedValue = Number(latest.toFixed(decimalPlaces));
+        if (formattedValue === 100) {
+          // Hide the number when it reaches 100.
+          ref.current.style.visibility = "hidden"; // Alternatively, use display = "none" if preferred.
+        } else {
+          // Ensure it's visible if not 100.
+          ref.current.style.visibility = "visible";
           ref.current.textContent = Intl.NumberFormat("en-US", {
             minimumFractionDigits: decimalPlaces,
             maximumFractionDigits: decimalPlaces,
-          }).format(Number(latest.toFixed(decimalPlaces)));
+          }).format(formattedValue);
         }
-      }),
-    [springValue, decimalPlaces],
-  );
+      }
+    });
+    return () => unsubscribe();
+  }, [springValue, decimalPlaces]);
 
   return (
     <span
